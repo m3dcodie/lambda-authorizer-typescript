@@ -1,0 +1,12 @@
+{
+    "account": "180012206345",
+    "tags": {
+        "Area": "Product",
+        "ApplicationID": "Apiauth",
+        "TechnicalOwner": "m3d.suhail@gmail.com",
+        "EnvironmentType": "NonProduction",
+        "Environment": "Dev"
+    },
+    "@aws-cdk/core:newStyleStackSynthesis": true,
+    "@aws-cdk/core:bootstrapQualifier": "apiauth"
+}

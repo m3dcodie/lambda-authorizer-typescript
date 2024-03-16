@@ -1,0 +1,17 @@
+*.js
+!jest.config.js
+*.d.ts
+node_modules
+*.zip
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+functions/users/*.zip
+functions/*.zip
+authorizer/*.zip
+
+functions/authorizer/auth.json
+
+#test file to debug
+test

@@ -1,0 +1,31 @@
+# This template is used to create infrastructure required by CDK for each AWS environment and region
+# aws cloudformation deploy --template-file ./cdk.yaml --stack-name CDKInit --capabilities CAPABILITY_NAMED_IAM
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  BootstrapQualifier:
+    Type: String
+    Description: a string that is added to the name of the CDKDeploymentPolicy
+Resources:
+  CDKDeploymentPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action:
+              - cloudwatch:*
+              - iam:*
+              - s3:*
+              - ssm:*
+              - sts:*
+              - lambda:*
+              - logs:*
+              - cloudformation:*
+              - apigateway:*
+            Effect: Allow
+            Resource: '*'
+      ManagedPolicyName:
+        {
+          Fn::Join:
+            ['', ['CDKDeploymentPolicy', { 'Ref': 'BootstrapQualifier' }]]
+        }

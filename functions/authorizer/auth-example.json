@@ -1,0 +1,5 @@
+{
+    "audience": "Input the audience",
+    "jwksUri": "https://well-known/jwks.json",
+    "tokenIssuer": "https://xxx.auth0.com/"
+}

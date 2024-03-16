@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaversion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "jsdoc",
+    "import",
+    "boundries"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsdoc/recommended",
+    //"plugin:boundries/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "import/no-unresolved": "error",
+    "no-console": 1,
+    "prettier/prettier": 2
+  }
+}
