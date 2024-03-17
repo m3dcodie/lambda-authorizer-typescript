@@ -57,7 +57,8 @@ You can configure AWS account and AWS region to bootstrap in this file [infrastr
 
 Rename the file `functions/authorizer/auth-example.json` to auth.json. Update the below.
 
-`{
+```
+{
 
     "audience": "",
 
@@ -65,9 +66,11 @@ Rename the file `functions/authorizer/auth-example.json` to auth.json. Update th
 
     "tokenIssuer": "https://<>/"
 
-}`
+}
+```
 
-`cd infrastructure/cdk-bootstrap/
+```
+cd infrastructure/cdk-bootstrap/
 
 ./bootstrap.sh [profile]
 
@@ -88,6 +91,8 @@ chmod 755 ./bootstrap.sh`
 - `npx cdk deploy ApiCdkStack --profile [profile name]`
 
 Confirm the changes with `y`.
+
+```
 
 ### Testing
 
