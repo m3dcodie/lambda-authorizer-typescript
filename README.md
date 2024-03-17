@@ -101,3 +101,20 @@ Once you got Bearer token.
 
 or through AWS Gateway
 [AWS APIGateway](/assets/images/APIGateway-test.png)
+
+## Roadmap
+
+- [] Changelog
+- [] CI/CD pipelines
+- [] Class & functions comments
+- [] More unit tests
+
+## License
+
+Distributed under the MIT License. See [LICENCE.md](./LICENCE.md) for more information.
+
+## Contact
+
+Suhail - [m3d.suhail@gmail.com](mailto:m3d.suhail@gmail.com)
+
+Project Link: [https://github.com/m3dcodie/lambda-authorizer-typescript](https://github.com/m3dcodie/lambda-authorizer-typescript)
