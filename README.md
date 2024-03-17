@@ -55,6 +55,18 @@ You can configure AWS account and AWS region to bootstrap in this file [infrastr
 
 `awsume <profile>`
 
+Rename the file `functions/authorizer/auth-example.json` to auth.json. Update the below.
+
+`{
+
+    "audience": "",
+
+    "jwksUri": "https://<>/.well-known/jwks.json",
+
+    "tokenIssuer": "https://<>/"
+
+}`
+
 `cd infrastructure/cdk-bootstrap/
 
 ./bootstrap.sh [profile]
