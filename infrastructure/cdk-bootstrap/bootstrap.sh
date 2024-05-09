@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # main account
-ACCOUNT=180012206345
-
-PROFILE=$1
-
+ACCOUNT=
 REGION=ap-southeast-2
 
 # ApplicationID is used as the suffix for the name of CDK bootstrap stacks.
@@ -26,14 +23,12 @@ echo "Bootstrapping CDK for ${ApplicationID}"
 aws cloudformation deploy --template-file ./cdk.yaml \
     --stack-name CDKInit${ApplicationID} \
     --capabilities CAPABILITY_NAMED_IAM \
-    --parameter-overrides BootstrapQualifier=${BootstrapQualifier}\
-    --profile $PROFILE
+    --parameter-overrides BootstrapQualifier=${BootstrapQualifier}
 
 
 #REGION=$(echo $i | xargs)
 echo "Bootstrapping $REGION"
 npx aws-cdk@2.x bootstrap aws://${ACCOUNT}/${REGION} --toolkit-stack-name CDKToolkit${ApplicationID} \
         --cloudformation-execution-policies arn:aws:iam::$ACCOUNT:policy/CDKDeploymentPolicy${BootstrapQualifier} \
-        --qualifier ${BootstrapQualifier}\
-        --profile $PROFILE
+        --qualifier ${BootstrapQualifier}
 
